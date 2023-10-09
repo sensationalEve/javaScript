@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number</title>
+  </head>
+  <body>
+    <script>
+      let foods = ["cheese", "chicken", "grapes", "hamburgers"];
+
+      let numOfValues = max - min + 1;
+      let randomNum = Math.random();
+      let randomVal = randomNum * numOfValues; //Math.random() * (max - min + 1)
+      let roundedRandomVal = Math.floor(randomVal); //Math.floor(Math.random() * (max - min + 1))
+      let finalNum = min + roundedRandomVal; // min + (Math.floor(Math.random() * (max - min + 1)))
+
+      return finalNum;
+
+      // creating a random integer from min and max.
+
+      function randomInt(min, max) {
+        return Math.floor((max - min + 1) * Math.random() + min);
+      }
+
+      console.log(foods[randomInt(0, 3)]);
+    </script>
+  </body>
+</html>

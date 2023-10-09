@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <button>dont press me</button>
+
+    <a href="http://google.com">Link to google</a>
+
+    <form action="" method="get">
+      <label for="">Your Name: <input type="text" name="name" id=""></label>
+      <input type="submit" value="send">
+    </form>
+
+    <script>
+      //1
+      let btn = document.querySelector("button");
+
+      function ouch() {
+        alert("i told you not to press me");
+      }
+
+      btn.onclick = ouch;
+
+      //2
+      document.querySelector("button").onclick = function () {
+        alert("i told you not to press me");
+      };
+
+      //3
+      btn.onclick = function () {
+        alert("i told you not to press me");
+      };
+
+      //4
+      btn.addEventListener("click", ouch);
+
+      //5
+      btn.addEventListener("click", function () {
+        alert("i told you not to press me");
+      });
+
+      // event object passed into the function
+
+      //6
+      btn.addEventListener("click", function (event) {
+        event.target.style.backgroundColor = "red";
+        alert("i told you not to press me");
+      });
+
+      // link
+      let link = document.querySelector('a');
+
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        alert('Sorry, no google for you!')
+      })
+
+      // form
+
+      let myForm = document.querySelector('form');
+
+      myForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let formData = document.querySelector('input').value;
+
+        alert(formData);
+      })
+    </script>
+  </body>
+</html>
