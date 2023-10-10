@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>miles to km converter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/miles-to-km-converter/style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Miles to Kilometers Converter</h1>
+
+    <div class="container top">
+      <p>
+        Type in a number of miles and click the button to convert the distance
+        to kilometers.
+      </p>
+
+      <form method="post" action="somephpfile.php" id="convert">
+        <input
+          type="text"
+          name="distance"
+          id="distance"
+          placeholder="distance"
+        />
+        <input type="submit" name="convertdist" value="Convert Distance" />
+      </form>
+    </div>
+    <div class="container bottom" id="answer">
+      <h2 class="invisible">Answer goes here</h2>
+    </div>
+
+    <p id="directions">
+      Press the "K" key to switch to kilometer converstion, press the "M" key to
+      switch to mile conversion
+    </p>
+  </body>
+</html>
