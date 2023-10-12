@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <p id="paragraph">Here is a paragraph</p>
+
+    <p>Dont change this paragraph</p>
+
+    <div id="main">
+      <p>here is paragraph one</p>
+      <p>here is paragraph two</p>
+      <p>here is paragraph three</p>
+      <p>here is paragraph four</p>
+      <p>here is paragraph five</p>
+      <p>Llamas and chickens!</p>
+      <p>here is paragraph seven</p>
+      <p>here is paragraph eight</p>
+      <p>here is paragraph nine</p>
+      <p>here is paragraph ten</p>
+      <p>here is paragraph eleven</p>
+      <p>here is paragraph twelve</p>
+    </div> -->
+
+    <!-- <nav>
+      <ul>
+        <li><a href="#">link one</a></li>
+        <li><a href="#">link two</a></li>
+        <li><a href="#">link three</a></li>
+        <li><a href="#">link four</a></li>
+        <li><a href="#">link five</a></li>
+      </ul>
+    </nav> -->
+
+    <!-- <p>
+      Here is a paragraph eith a
+      <a href="http://google.com">link to google</a>in it
+    </p> -->
+
+    <!-- <p id="paragraph">click a link to change this paragraph</p> -->
+
+    <nav>
+      <ul>
+        <li><a href="#" id="link1">link one</a></li>
+        <li><a href="#" id="link2">link two</a></li>
+        <li><a href="#" id="link3">link three</a></li>
+        <li><a href="#" id="link4">link four</a></li>
+        <li><a href="#" id="link5">link five</a></li>
+      </ul>
+    </nav>
+
+    <p id="paralink1">looks like you clicked the first link in the list</p>
+    <p id="paralink2">looks like you clicked the second link in the list</p>
+    <p id="paralink3">looks like you clicked the third link in the list</p>
+    <p id="paralink4">looks like you clicked the fourth link in the list</p>
+    <p id="paralink5">looks like you clicked the fifth link in the list</p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      //JS
+      // const paragraph = document.querySelector('#paragraph');
+      // paragraph.style.fontSize = '24px';
+
+      //2
+      //let div = document.querySelectorAll("#main p");
+      //for (const p of div) {
+      //   p.style.fontSize = '24px';
+      //   p.style.color = 'red';
+      // if (p.innerHTML == ('Llamas and chickens!')) {
+      //  p.style.color = 'red'
+      //}
+      // }
+
+      //3
+      // let lastPara = document.querySelector("#main p:last-child");
+      // lastPara.style.fontSize = "24px";
+      // lastPara.style.color = "red";
+
+      //4
+      // let even = document.querySelectorAll("#main p:nth-child(even)");
+      // for (const p of even) {
+      //   p.style.color = 'red';
+      // }
+
+      //5
+      // let six = document.querySelector("#main p:nth-child(6)");
+      // six.style.color = 'red'
+
+      //6;
+      // let links = document.querySelectorAll("li a");
+      // for (const link of links) {
+      //   link.addEventListener("click", function (e) {
+      //     e.preventDefault();
+      //alert("clicked!")
+      //7;
+      //alert(this.innerHTML);
+      //8
+      //this.style.color = 'red'
+      //9
+      // const pChange = document.querySelector('#paragraph');
+      //     if (this.innerHTML == 'link two') {
+      //       pChange.innerHTML = 'You clicked link two'
+      //     } else {
+      //       pChange.innerHTML = 'You clicked'
+      //     }
+      //   });
+      // }
+
+      //10
+      // const linkIds = document.querySelectorAll("a");
+      // const paralinkIds = document.querySelectorAll("p");
+
+      // for (const linkId of linkIds) {
+      //   linkId.addEventListener("click", function (e) {
+      //     e.preventDefault();
+      //     const singleLinkId = "#para" + this.id;
+      //     for (const paralinkId of paralinkIds) {
+      //       paralinkId.style.color = "black";
+      //     }
+      //     const thisParagraph = document.querySelector(singleLinkId);
+      //     thisParagraph.style.color = "red";
+      //   });
+      // }
+
+      //jQuery
+      //$('#paragraph').css('font-size', '24px');
+
+      //2
+      //$('#main p').css('fontSize', '24px').css('color', 'red');
+      //same as....
+      //$('#main p').css({'font-size' : '24px', 'color' : 'red'})
+
+      //3
+      //$("#main p:last-child").css({'font-size' : '24px', 'color' : 'red'})
+      //$('#main p').last().css({'font-size' : '24px', 'color' : 'red'})
+
+      //4
+      //$('#main p').even().css('color', 'red')
+
+      //5
+      //$('#main p:nth-child(6)').css('color', 'red')
+      //$('#main p:contains(Llamas and chickens!)').css('color', 'red')
+
+      //6
+      //$("li a").click(function () {
+      //alert('clicked!')
+      //7
+      //alert($(this).html())
+      //8
+      //  $(this).css('color', 'red')
+      //9
+      // let thisLink = $(this).html()
+      // if (thisLink == 'link two') {
+      //   $('#paragraph').html(`you clicked ${thisLink}`)
+      // } else {
+      //   $('#paragraph').html(`you clicked`)
+      // }
+      // });
+
+      //10
+      $('a')
+    </script>
+  </body>
+</html>
