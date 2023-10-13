@@ -62,107 +62,112 @@
 
     <script>
       //JS
-      // const paragraph = document.querySelector('#paragraph');
-      // paragraph.style.fontSize = '24px';
+      const paragraph = document.querySelector("#paragraph");
+      paragraph.style.fontSize = "24px";
 
       //2
-      //let div = document.querySelectorAll("#main p");
-      //for (const p of div) {
-      //   p.style.fontSize = '24px';
-      //   p.style.color = 'red';
-      // if (p.innerHTML == ('Llamas and chickens!')) {
-      //  p.style.color = 'red'
-      //}
-      // }
+      let div = document.querySelectorAll("#main p");
+      for (const p of div) {
+        p.style.fontSize = "24px";
+        p.style.color = "red";
+        if (p.innerHTML == "Llamas and chickens!") {
+          p.style.color = "red";
+        }
+      }
 
       //3
-      // let lastPara = document.querySelector("#main p:last-child");
-      // lastPara.style.fontSize = "24px";
-      // lastPara.style.color = "red";
+      let lastPara = document.querySelector("#main p:last-child");
+      lastPara.style.fontSize = "24px";
+      lastPara.style.color = "red";
 
       //4
-      // let even = document.querySelectorAll("#main p:nth-child(even)");
-      // for (const p of even) {
-      //   p.style.color = 'red';
-      // }
+      let even = document.querySelectorAll("#main p:nth-child(even)");
+      for (const p of even) {
+        p.style.color = "red";
+      }
 
       //5
-      // let six = document.querySelector("#main p:nth-child(6)");
-      // six.style.color = 'red'
+      let six = document.querySelector("#main p:nth-child(6)");
+      six.style.color = "red";
 
       //6;
-      // let links = document.querySelectorAll("li a");
-      // for (const link of links) {
-      //   link.addEventListener("click", function (e) {
-      //     e.preventDefault();
-      //alert("clicked!")
-      //7;
-      //alert(this.innerHTML);
-      //8
-      //this.style.color = 'red'
-      //9
-      // const pChange = document.querySelector('#paragraph');
-      //     if (this.innerHTML == 'link two') {
-      //       pChange.innerHTML = 'You clicked link two'
-      //     } else {
-      //       pChange.innerHTML = 'You clicked'
-      //     }
-      //   });
-      // }
+      let links = document.querySelectorAll("li a");
+      for (const link of links) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("clicked!");
+          //7;
+          //alert(this.innerHTML);
+          //8
+          this.style.color = "red";
+          //9
+          const pChange = document.querySelector("#paragraph");
+          if (this.innerHTML == "link two") {
+            pChange.innerHTML = "You clicked link two";
+          } else {
+            pChange.innerHTML = "You clicked";
+          }
+        });
+      }
 
       //10
-      // const linkIds = document.querySelectorAll("a");
-      // const paralinkIds = document.querySelectorAll("p");
+      const linkIds = document.querySelectorAll("a");
+      const paralinkIds = document.querySelectorAll("p");
 
-      // for (const linkId of linkIds) {
-      //   linkId.addEventListener("click", function (e) {
-      //     e.preventDefault();
-      //     const singleLinkId = "#para" + this.id;
-      //     for (const paralinkId of paralinkIds) {
-      //       paralinkId.style.color = "black";
-      //     }
-      //     const thisParagraph = document.querySelector(singleLinkId);
-      //     thisParagraph.style.color = "red";
-      //   });
-      // }
+      for (const linkId of linkIds) {
+        linkId.addEventListener("click", function (e) {
+          e.preventDefault();
+          const singleLinkId = "#para" + this.id;
+          for (const paralinkId of paralinkIds) {
+            paralinkId.style.color = "black";
+          }
+          const thisParagraph = document.querySelector(singleLinkId);
+          thisParagraph.style.color = "red";
+        });
+      }
 
       //jQuery
-      //$('#paragraph').css('font-size', '24px');
+      $("#paragraph").css("font-size", "24px");
 
       //2
-      //$('#main p').css('fontSize', '24px').css('color', 'red');
+      $("#main p").css("fontSize", "24px").css("color", "red");
       //same as....
-      //$('#main p').css({'font-size' : '24px', 'color' : 'red'})
+      $("#main p").css({ "font-size": "24px", color: "red" });
 
       //3
-      //$("#main p:last-child").css({'font-size' : '24px', 'color' : 'red'})
-      //$('#main p').last().css({'font-size' : '24px', 'color' : 'red'})
+      $("#main p:last-child").css({ "font-size": "24px", color: "red" });
+      $("#main p").last().css({ "font-size": "24px", color: "red" });
 
       //4
-      //$('#main p').even().css('color', 'red')
+      $("#main p").even().css("color", "red");
 
       //5
-      //$('#main p:nth-child(6)').css('color', 'red')
-      //$('#main p:contains(Llamas and chickens!)').css('color', 'red')
+      $("#main p:nth-child(6)").css("color", "red");
+      $("#main p:contains(Llamas and chickens!)").css("color", "red");
 
       //6
-      //$("li a").click(function () {
-      //alert('clicked!')
-      //7
-      //alert($(this).html())
-      //8
-      //  $(this).css('color', 'red')
-      //9
-      // let thisLink = $(this).html()
-      // if (thisLink == 'link two') {
-      //   $('#paragraph').html(`you clicked ${thisLink}`)
-      // } else {
-      //   $('#paragraph').html(`you clicked`)
-      // }
-      // });
+      $("li a").click(function () {
+        alert("clicked!");
+        //7
+        alert($(this).html());
+        //8
+        $(this).css("color", "red");
+        //9
+        let thisLink = $(this).html();
+        if (thisLink == "link two") {
+          $("#paragraph").html(`you clicked ${thisLink}`);
+        } else {
+          $("#paragraph").html(`you clicked`);
+        }
+      });
 
       //10
-      $('a')
+      $("a").click(function () {
+        //const singleLinkId = "#para" + this.id;
+        const singleLinkId = "#para" + $(this).attr("id");
+        $("p").css("color", "black");
+        $(singleLinkId).css("color", "red");
+      });
     </script>
   </body>
 </html>
