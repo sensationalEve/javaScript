@@ -6,3 +6,41 @@ body {
 	font-family:Arial; 
 	color:#333; 
 }
+
+#tabs {
+	width: 400px;
+	margin: auto;
+}
+
+#tabs > ul {
+	list-style: none;
+	display: flex;
+}
+
+#tabs > ul > li > a {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 2px;
+	background-color: #a2a2a2;
+	color: #cecece;
+	text-decoration: none;
+	padding: 0 15px;
+	border-radius: 3px 3px 0 0;
+}
+
+#tabs > div {
+	display: none;
+	padding: 15px;
+	background-color: #eaeaea;
+}
+
+#tabs > div:first-of-type {
+	display: block;
+	background-color: #eaeaea;
+}
+
+p {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+}
