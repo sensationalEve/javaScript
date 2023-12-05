@@ -26,7 +26,7 @@ body { padding: 100px; background:#717171; }
 
 /********** Link Styles ***********/
 
-#links {
+/* #links {
 	width:420px;
 	display: flex;
 	margin: 0 auto;
@@ -48,4 +48,4 @@ body { padding: 100px; background:#717171; }
 #links a:hover {
 	background:#A51D1F;
 	color:#fff;
-}
+} */
