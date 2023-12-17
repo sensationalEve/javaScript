@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype &amp; Inheritance</title>
+  </head>
+  <body>
+    <h1>Demonstrating Prototypes &amp; Inheritance</h1>
+
+    <script>
+      function iPhone() {} //constructor
+
+      iPhone.prototype.faceId = function () {
+        console.log("unlock with face");
+      };
+
+      iPhone.prototype.video = function () {
+        console.log("4k video with phone");
+      };
+
+      iPhone.prototype.stocksApp = function () {
+        console.log("find out stock market");
+      };
+
+      // iPhone.prototype.app = "tiktok";
+
+      let myPhone = new iPhone();
+
+      // console.log(myPhone);
+
+      myPhone.faceId();
+      myPhone.video();
+      myPhone.stocksApp();
+
+      myPhone.app = "instagram";
+      // console.log(myPhone);
+
+      // myPhone.stocksApp = function () {
+      //   console.log("upgrade to pro version");
+      // };
+      // myPhone.stocksApp();
+      myPhone.stocksApp = undefined
+      console.log(myPhone);
+
+      let myAnimals = ['chicken', 'dog', 'turtle', 'llama']
+      console.log(myAnimals);
+    </script>
+  </body>
+</html>
